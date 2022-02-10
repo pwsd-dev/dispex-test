@@ -147,6 +147,4 @@ document.addEventListener("click", (e) => {
   new CustomSelect("#select-1");
 });
 
-//
-
 export default CustomSelect;

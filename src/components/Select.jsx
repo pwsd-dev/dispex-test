@@ -3,7 +3,6 @@ import styled from "styled-components";
 import CustomSelect from "../JS/custom-select.js";
 
 function Select() {
-  //   new CustomSelect("#select-1");
   return (
     <div className="select" id="select-1">
       <button
