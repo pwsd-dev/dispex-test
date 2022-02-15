@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import itemsReducer from "./items";
+import streets from "./items";
 
 const rootReducer = combineReducers({
-  items: itemsReducer,
+  streets: streets,
 });
 
 export default rootReducer;

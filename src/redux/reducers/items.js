@@ -1,11 +1,14 @@
 const initialState = {
   items: [],
+  streets: {},
+  home: {},
+  house: {},
   // isLoaded: false,
 };
 
-const items = (state = initialState, action) => {
+const streets = (state = initialState, action) => {
   switch (action.type) {
-    case "SET_PIZZAS":
+    case "SET_ITEMS":
       return {
         ...state, // возьми старые данные из state
         items: action.payload, // и замени на новый state
@@ -23,4 +26,4 @@ const items = (state = initialState, action) => {
   }
 };
 
-export default pizzas;
+export default streets;

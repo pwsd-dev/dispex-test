@@ -1,29 +1,11 @@
 import axios from "axios";
 
 export const fetchItems = () => (dispatch) => {
+  const BASE_URL = "https://dispex.org/api/vtest";
+
   async function getData() {
-    await axios.get(`https://dispex.org/api/vtest`).then(({ data }) => {
-      dispatch(setItems(data));
-    });
-
-    await axios.get(`https://dispex.org/api/vtest/streets`).then(({ data }) => {
-      dispatch(setItems(data));
-    });
-
-    await axios
-      .get(`https://dispex.org/api/vtest/houses/{id}`)
-      .then(({ data }) => {
-        dispatch(setItems(data));
-      });
-
-    await axios
-      .get(`https://dispex.org/api/vtest/house_flats/{id}`)
-      .then(({ data }) => {
-        dispatch(setItems(data));
-      });
-
-    await axios
-      .get(`https://dispex.org/api/vtest/HousingStock/clients`)
+    let streets = await axios
+      .get(`${BASE_URL}/Request/streets`)
       .then(({ data }) => {
         dispatch(setItems(data));
       });
